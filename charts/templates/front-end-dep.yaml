@@ -34,6 +34,7 @@ spec:
             drop:
               - all
           readOnlyRootFilesystem: true
+          allowPrivilegeEscalation: false
         livenessProbe:
           httpGet:
             path: /
