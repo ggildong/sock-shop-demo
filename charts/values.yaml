@@ -104,14 +104,14 @@ ordersdb:
         tag: 4.4.0
     resources:
         requests:
-            cpu: 100m
+            cpu: 200m
             memory: 256Mi
         limits:
-            cpu: 100m
+            cpu: 200m
             memory: 256Mi
     persistentVolume:
         storageClass: ''
-        size: 256Mi
+        size: 512Mi
 
 orders:
     image:
@@ -120,10 +120,10 @@ orders:
     containerPort: 80
     resources:
         limits:
-            cpu: 100m
+            cpu: 200m
             memory: 256Mi
         requests:
-            cpu: 100m
+            cpu: 200m
             memory: 256Mi
 
 payment:
@@ -186,11 +186,11 @@ shipping:
     containerPort: 80
     resources:
         limits:
-            cpu: 100m
-            memory: 2000Mi
+            cpu: 200m
+            memory: 256Mi
         requests:
-            cpu: 100m
-            memory: 2000Mi
+            cpu: 200m
+            memory: 256Mi
 
 userdb:
     image:
