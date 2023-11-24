@@ -24,14 +24,14 @@ cartsdb:
         tag: 4.4.0
     resources:
         requests:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 200m
+            memory: 256Mi
         limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 200m
+            memory: 256Mi
     persistentVolume:
         storageClass: ''
-        size: 512Mi
+        size: 256Mi
 
 carts:
     image:
@@ -40,11 +40,11 @@ carts:
     containerPort: 80
     resources:
         limits:
-            cpu: 300m
-            memory: 2000Mi
+            cpu: 200m
+            memory: 256Mi
         requests:
-            cpu: 300m
-            memory: 2000Mi
+            cpu: 200m
+            memory: 256Mi
 
 cataloguedb:
     image:
@@ -52,11 +52,11 @@ cataloguedb:
         tag: 0.3.0
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
 
 catalogue:
     image:
@@ -78,11 +78,11 @@ frontend:
         tag: 0.3.12
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
 
 loadtest:
     replicas: 2
@@ -92,11 +92,11 @@ loadtest:
         tag: 0.1.1
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
 
 ordersdb:
     image:
@@ -104,14 +104,14 @@ ordersdb:
         tag: 4.4.0
     resources:
         requests:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 100m
+            memory: 256Mi
         limits:
-            cpu: 500m
-            memory: 512Mi
+            cpu: 100m
+            memory: 256Mi
     persistentVolume:
         storageClass: ''
-        size: 512Mi
+        size: 256Mi
 
 orders:
     image:
@@ -120,11 +120,11 @@ orders:
     containerPort: 80
     resources:
         limits:
-            cpu: 500m
-            memory: 2000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
-            cpu: 200m
-            memory: 2000Mi
+            cpu: 100m
+            memory: 256Mi
 
 payment:
     image:
@@ -146,11 +146,11 @@ queuemaster:
         tag: 0.3.1
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
 
 rabbitmq:
     image:
@@ -159,9 +159,9 @@ rabbitmq:
     resources:
         requests:
             memory: 256Mi
-            cpu: 350m
+            cpu: 150m
         limits:
-            memory: 512Mi
+            memory: 256Mi
             cpu: 1
 
 sessiondb:
@@ -171,13 +171,13 @@ sessiondb:
     resources:
         requests:
             memory: 256Mi
-            cpu: 250m
+            cpu: 100m
         limits:
             memory: 256Mi
-            cpu: 250m
+            cpu: 100m
     persistentVolume:
         storageClass: ''
-        size: 512Mi
+        size: 256Mi
 
 shipping:
     image:
@@ -186,10 +186,10 @@ shipping:
     containerPort: 80
     resources:
         limits:
-            cpu: 300m
+            cpu: 100m
             memory: 2000Mi
         requests:
-            cpu: 300m
+            cpu: 100m
             memory: 2000Mi
 
 userdb:
@@ -198,11 +198,11 @@ userdb:
         tag: 0.4.0
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
 
 user:
     image:
@@ -211,11 +211,11 @@ user:
     containerPort: 80
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 400Mi
+            memory: 256Mi
 
 zipkincron:
     image:
@@ -223,11 +223,11 @@ zipkincron:
         tag: 1.4.0
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
 
 zipkin:
     image:
@@ -235,11 +235,11 @@ zipkin:
         tag: 2.21
     resources:
         limits:
-            cpu: 300m
-            memory: 1000Mi
+            cpu: 100m
+            memory: 256Mi
         requests:
             cpu: 100m
-            memory: 300Mi
+            memory: 256Mi
     enabled:  false
     url: zipkin.zipkin.svc.cluster.local
 
@@ -250,7 +250,7 @@ zipkinmysql:
     resources:
         requests:
             memory: 256Mi
-            cpu: 250m
+            cpu: 100m
         limits:
-            memory: 768Mi
+            memory: 256Mi
             cpu: 1
